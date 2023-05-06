@@ -1,0 +1,29 @@
+.operator.disabled:hover
+{
+  animation: shake 0.2s cubic-bezier(.36,.07,.19,.97) both;
+  background-color: rgb(255, 30, 30);
+  color: black;
+}
+
+.operator.disabled:active
+{
+  background-color: rgb(255, 30, 30);
+  scale: 1;
+}
+
+.operator.disabled
+{
+    color: grey;
+}
+
+.number.disabled
+{
+    color: grey;
+}
+
+.number.disabled:hover
+{
+    animation: bump 0.2s cubic-bezier(.36,.07,.19,.97) both;
+  background-color: #F4F7F5;
+  scale: 1;
+}

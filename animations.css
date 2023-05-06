@@ -1,0 +1,54 @@
+@keyframes load
+{
+  0% { scale: 0; }
+  90% { scale: 2.7; }
+  95% { scale: 2.6; }
+  100% { scale: 2.5; }
+}
+
+@keyframes bump
+{
+  0% { scale: 1; }
+  50% { scale: 1.1; }
+  100% { scale: 1; 
+  color:rgb(255, 30, 30)}
+}
+
+@-webkit-keyframes pulse 
+{  
+  0% { background-color: rgb(247, 108, 108); }
+  50% { background-color: #A7A2A9; }
+  51% { background-color: rgb(247, 108, 108); }
+  100% { background-color: #A7A2A9; }
+}
+
+@keyframes pulse 
+{  
+  0% { background-color: rgb(247, 108, 108); }
+  50% { background-color: #A7A2A9; }
+  51% { background-color: rgb(247, 108, 108); }
+  100% { background-color: #A7A2A9; }
+}
+
+@keyframes shake 
+{
+  10%, 90% 
+  {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% 
+  {
+    transform: translate3d(1px, 0, 0);
+  }
+
+  30%, 50%, 70% 
+  {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  40%, 60% 
+  {
+    transform: translate3d(2px, 0, 0);
+  }
+}

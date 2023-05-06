@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap');
+@import 'animations.css';
+@import 'disabled.css';
+
+html, body 
+{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Radical, Rubik, sans-serif;
+  background-color: #08090A;
+}
+
+#background 
+{
+  animation: load 350ms ease-in-out;
+  scale: 2.5;
+  background-color: #222823;
+  border-radius: 15px;
+}
+
+#display 
+{
+  width: 90%;
+  background-color: #A7A2A9;
+  border-radius: 15px;
+  margin-top: 5%;
+  margin-left: 5%;
+  text-align: right;
+  max-height: 26px;
+}
+
+#display-text
+{
+  font-size: 15px;
+  margin: 0;
+  padding: 4px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: 0.2s;
+  color: #08090A;
+}
+
+.button-container 
+{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  margin-top: 5%;
+  padding: 10px;
+  padding-top: 0px;
+}
+
+.number, .operator, .clear, .equals, .decimal, .delete
+{
+  width: 100%;
+  border-radius: 15px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Rubik;
+  font-size: 20px;
+  color: #08090A;
+  transition: scale, background-color 0.2s;
+}
+
+#radical
+{
+  font-family: Noto Sans Math;
+  text-indent: -3px;
+  max-height: 26px;
+}
+
+#exponent
+{
+  max-width: 26px;
+}
+
+sup 
+{
+  margin-top: -12px;
+  font-size: 10px;
+}
+
+.number 
+{
+  background-color: #F4F7F5;
+}
+
+.number:hover, .decimal:hover, .equals:hover
+{
+  background-color: #d0d0d0;
+  scale: .97;
+  transition: scale 0.2s;
+}
+
+.number:active 
+{
+  background-color: #aeaeae;
+  scale: 0.9;
+}
+
+.operator 
+{
+  background-color: #575A5E;
+}
+
+.operator:hover 
+{
+  background-color: #4c4e51;
+  transition: 0.2s;
+}
+
+.operator:active 
+{
+  background-color: #3A3C3F;
+  scale: 0.9;
+}
+
+.clear, .delete
+{
+  background-color: #A7A2A9;
+  color: #FFFFFF;
+}
+
+.clear:hover, .delete:hover
+{
+  background-color: rgb(255, 136, 136);
+  transition: 0.2s;
+}
+
+.clear:active, .delete:active
+{
+  background-color: rgb(247, 108, 108);
+  scale: 0.9;
+}
+
+.clear.awaiting {
+  background-color: #A7A2A9;
+  -webkit-animation-name: pulse;  
+  -webkit-animation-iteration-count: infinite;  
+  -webkit-animation-duration: 2s;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  transition: background-color 1s;
+}
+
+.equals 
+{
+  background-color: #F4F7F5;
+  transition: scale, background-color 0.2s;
+}
+
+.equals:hover
+{
+  background-color: #d0d0d0;
+  transition: 0.2s;
+}
+
+.equals:active 
+{
+  background-color: #aeaeae;
+  scale: 0.9;
+}
+
+@font-face
+{
+  font-family: 'Radical';
+  src: url(https://fonts.gstatic.com/s/notosansmath/v15/7Aump_cpkSecTWaHRlH2hyV5UEl981w.woff2) format('woff2');
+  unicode-range: U+221A;
+}
